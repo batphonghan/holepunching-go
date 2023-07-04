@@ -50,7 +50,7 @@ func handleUDPClient(conn *net.UDPConn) {
 
 	switch p.Action {
 	case model.Get:
-		fmt.Println("Process: GET the IP request: ", p)
+		fmt.Println("Process: GET the IP request:## ", p)
 		var resp model.Response
 		if ip, ok := ips[p.PeerID]; ok {
 			resp.RAddr = &ip
