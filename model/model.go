@@ -1,5 +1,7 @@
 package model
 
+import "net"
+
 type Action string
 
 const (
@@ -7,12 +9,12 @@ const (
 	Reg Action = "REG"
 )
 
-// type GETRequest struct {
-// 	Action Action
-// 	PeerID string
-// 	IP     string
-// 	LAddr  *net.UDPAddr `json:"-"`
-// }
+type GETRequest struct {
+	Action Action
+	PeerID string
+	IP     string
+	LAddr  *net.UDPAddr `json:"-"`
+}
 
 type Request struct {
 	Action Action
